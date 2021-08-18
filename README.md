@@ -2,8 +2,6 @@
 =======
 ###### ***SDK Toolkit for the Kookaburra Programming Language.***
 ----
-[![.NET](https://github.com/AZProductions/KookaburraSDK/actions/workflows/dotnet.yml/badge.svg)](https://github.com/AZProductions/KookaburraSDK/actions/workflows/dotnet.yml)
-
 ## Copyright and License
 
 This repository is under a [proprietary licence](https://github.com/AZProductions/Kookaburra/blob/main/LICENCE).
