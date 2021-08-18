@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>0.0.1</Version>
+    <Description>SDK Toolkit for the Kookaburra Programming Language.</Description>
+    <Company>AZ Software</Company>
+    <Product>Kookaburra</Product>
+    <Authors>AZ Software</Authors>
   </PropertyGroup>
 
 </Project>
