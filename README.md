@@ -2,3 +2,4 @@
 =======
 ###### ***SDK Toolkit for the Kookaburra Programming Language.***
 ----
+[![.NET](https://github.com/AZProductions/KookaburraSDK/actions/workflows/dotnet.yml/badge.svg)](https://github.com/AZProductions/KookaburraSDK/actions/workflows/dotnet.yml)
