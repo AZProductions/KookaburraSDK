@@ -33,6 +33,31 @@ db.Stop();
 ## ⏱ Get Started
 After downloading it from Nuget, add it to your project dependencies. Import it by typing `using Kookaburra.SDK;`.
 
+## 🧾List
+| Example | Name | Description |
+| ----- | ----- | ----- |
+| `Console.WriteLine(Markup.RemoveFirstChar("hhello"));` | **Markup.RemoveFirstChar** | Removes the first character from string and returns it. |
+| `Console.WriteLine(Markup.RemoveLastChar("helloo");`| **Markup.RemoveLastChar** | Removes the last character from string and returns it.
+| `Console.WriteLine(Markup.StartsWithUpper("Example").ToString());` | **Markup.StartsWithUpper** | Returns True if the string start with a uppercase letter. |
+| `Console.WriteLine(Markup.StartsWithLower("example").ToString());` | **Markup.StartsWithLower** | Returns True if the string start with a lowercase letter. |
+| `Console.WriteLine(Markup.ToLower("HELLO"));` | **Markup.ToLower** | Returns a lowercase version of the string. |
+| `Console.WriteLine(Markup.ToUpper("hello"));` | **Markup.ToUpper** | Returns an uppercase version of the string. |
+| `Console.WriteLine(Markup.IsInArray(Array, Value).ToString());` | **Markup.IsInArray** | Returns True if the selected string is in the array. |
+| `Console.WriteLine(Markup.IsInIntArray(Array, Value).ToString());` | **Markup.IsInIntArray** | Returns True if the selected int is in the array. |
+| `Console.WriteLine(Markup.DeleteChar('E', "Example"));` | **Markup.DeleteChar** | Deletes specified character from the string and returns it. |
+| `Console.WriteLine(Markup.DeleteString("Kooka", "Kookaburra"));` | **Markup.DeleteString** | Deletes specified charaters (string) from the string and returns it. |
+| `Markup.SetForegroundColor("Red");` | **Markup.SetForegroundColor** | Sets the foreground color to the specified string. |
+| `Markup.SetBackgroundColor("Blue");` | **Markup.SetBackgroundColor** | Sets the background color to the specified string. |
+| `Markup.SetForeground(ConsoleColor.Red);` | **Markup.SetForeground** | Sets the foreground color to the specified ConsoleColor. |
+| `Markup.SetBackground(ConsoleColor.Red);` | **Markup.SetBackground** | Sets the background color to the specified ConsoleColor. |
+| `Markup.WhiteSpace();` | **Markup.WhiteSpace** | Creates a blank line. |
+| `Markup.WhiteSpaceANSI();` | **Markup.WhiteSpaceANSI** | Creates a blank line using ANSI charaters. '\x0A' |
+| `Markup.Reset();` | **Markup.Reset** | Clears the terminal window and resets the colors. |
+| `Markup.Clear();` | **Markup.Clear** | Clears the terminal window using ANCI characters. |
+| `Console.WriteLine("Top = " + Markup.GetPos().Item1 + " Left = " Markup.GetPos().Item2);` | **Markup.GetPos** | Returns the coorinates of the console cursor. |
+| `Markup.SetPos(1,2);` | **Markup.SetPos** | Sets the coorinates of the console cursor. |
+|`Console.WriteLine(Markup.SplitAndRemove("Hello World !", " World ")[0].ToString());`| **Markup.SplitAndRemove** | Splits the string and removes the part where it got splitted. |
+
 ## Copyright and License
 
 This repository is under a [proprietary licence](https://github.com/AZProductions/Kookaburra/blob/main/LICENCE).
