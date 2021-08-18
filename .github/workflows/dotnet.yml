@@ -20,17 +20,14 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
-      working-directory: './kookaburra.sdk'
+      working-directory: ./'kookaburra.sdk'
       run: |
-        cd 'Kookaburra.SDK'
+        ls
         dotnet restore
     - name: Build
-      working-directory: './kookaburra.sdk'
+      working-directory: ./kookaburra.sdk
       run: |
-        cd 'Kookaburra.SDK'
         dotnet build --no-restore
     - name: Test
-      working-directory: './kookaburra.sdk'
-      run: |
-        cd 'Kookaburra.SDK'
+      working-directory: ./kookaburra.sdk
         dotnet test --no-build --verbosity normal
