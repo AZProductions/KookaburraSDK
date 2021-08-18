@@ -19,16 +19,18 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 5.0.x
-    - name: Testing Directory.
-      run: |
-        cd 'Kookaburra.SDK'
-        ls
     - name: Restore dependencies
       working-directory: './kookaburra.sdk'
-      run: dotnet restore
+      run: |
+        cd 'Kookaburra.SDK'
+        dotnet restore
     - name: Build
       working-directory: './kookaburra.sdk'
-      run: dotnet build --no-restore
+      run: |
+        cd 'Kookaburra.SDK'
+        dotnet build --no-restore
     - name: Test
       working-directory: './kookaburra.sdk'
-      run: dotnet test --no-build --verbosity normal
+      run: |
+        cd 'Kookaburra.SDK'
+        dotnet test --no-build --verbosity normal
