@@ -3,6 +3,7 @@ using System.Diagnostics;
 
 namespace Kookaburra.SDK
 {
+    //V1
     /// <summary>
     /// Debug Class for the Kookaburra SDK.
     /// </summary>
