@@ -20,7 +20,7 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
-      working-directory: ./'kookaburra.sdk'
+      working-directory: kookaburra.sdk
       run: |
         ls
         dotnet restore
