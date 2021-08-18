@@ -4,6 +4,6 @@ namespace Kookaburra.SDK.Networking
 {
     public static class Networking
     {
-        public static bool HasInternet = NetworkInterface.GetIsNetworkAvailable();
+        public static bool HasInternet = NetworkInterface.GetIsNetworkAvailable(); //test
     }
 }
