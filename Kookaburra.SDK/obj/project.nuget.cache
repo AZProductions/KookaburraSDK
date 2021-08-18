@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Fui0WXjqPqmfGLToe2UtqykDky7QWo8Gjk5B+eklLLHVAzkBIOenSRJDLqHnP4ueVQG/zYAwtDeu26fyihlXKA==",
+  "dgSpecHash": "ZXwfRgoN1DSzfAXD2F0Dq6Dj9A7pLwUp/Xx0YFbP0xL7fBI8A54oWb8nQDXwNDiKfRsnmLqzN+VuGzDxRgr9tw==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\KookaburraSDK\\Kookaburra.SDK\\Kookaburra.SDK.csproj",
+  "projectFilePath": "D:\\Projects\\KookaburraSDK\\Kookaburra.SDK\\kookaburra.sdk.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
