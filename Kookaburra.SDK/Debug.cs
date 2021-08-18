@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Diagnostics;
 
 namespace Kookaburra.SDK
@@ -12,10 +8,6 @@ namespace Kookaburra.SDK
     /// </summary>
     public class Debug
     {
-        /// <summary>
-        /// If True, the system is x64 based.
-        /// </summary>
-        public bool Is64x { get; }
         /// <summary>
         /// The location of the debug executable.
         /// </summary>
@@ -32,14 +24,13 @@ namespace Kookaburra.SDK
         public Debug(string executablelocation, string arguments = "")
         {
             ExecutableLocation = executablelocation;
-            Is64x = Environment.Is64BitProcess;
             ExecutableArguments = arguments;
         }
 
         /// <summary>
         /// Starts the specified program for debugging.
         /// </summary>
-        public void Start(bool tracevalue) 
+        public void Start(bool tracevalue)
         {
             PrintInput(tracevalue);
         }
