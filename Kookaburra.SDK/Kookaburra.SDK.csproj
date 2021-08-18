@@ -3,11 +3,37 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.0.1</Version>
+    <Version>0.0.1.1</Version>
     <Description>SDK Toolkit for the Kookaburra Programming Language.</Description>
     <Company>AZ Software</Company>
     <Product>Kookaburra</Product>
     <Authors>AZ Software</Authors>
+    <Copyright>This repository is under a proprietary licence.</Copyright>
+    <PackageProjectUrl>https://github.com/AZProductions/KookaburraSDK</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/AZProductions/KookaburraSDK</RepositoryUrl>
+    <RepositoryType>SDK</RepositoryType>
+    <PackageTags>library sdk dotnet console-library kookaburra markup-library</PackageTags>
+    <PackageIcon>icon.png</PackageIcon>
+    <PackageIconUrl />
+    <PackageLicenseExpression></PackageLicenseExpression>
+    <PackageLicenseFile>LICENCE.txt</PackageLicenseFile>
+    <AssemblyVersion>0.0.1.1</AssemblyVersion>
+    <FileVersion>0.0.1.1</FileVersion>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\.github\img\icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="LICENCE.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Management" Version="5.0.0" />
+  </ItemGroup>
 
 </Project>
