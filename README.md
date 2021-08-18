@@ -29,6 +29,10 @@ Debug db = new Debug(@"C:\....\file.exe", True);
 db.Start();
 db.Stop();
 ```
+- Advanced Environment functions.
+```C#
+Console.WriteLine(Env.IsCurrentProcessAdmin()); //Returns true if the user is admin. (Using Windows API)
+```
 
 ## ⏱ Get Started
 After downloading it from Nuget, add it to your project dependencies. Import it by typing `using Kookaburra.SDK;`.
