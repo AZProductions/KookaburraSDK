@@ -5,7 +5,7 @@
 ----
 
 ## 📚 Description
-Kookaburra.SDK is the official Software Development Kit for [Kookaburra](https://github.com/AZProductions/Kookaburra). The SDK includes usefull features like Alerts, Markup formatting and more. Get Started by Downloading it via [Nuget](https://www.nuget.org/packages/Kookaburra.SDK). Read more..
+Kookaburra.SDK is the official Software Development Kit for [Kookaburra](https://github.com/AZProductions/Kookaburra). The SDK includes usefull features like Alerts, Markup formatting and more. Get Started by Downloading it via [Nuget](https://www.nuget.org/packages/Kookaburra.SDK). [Read more..](https://github.com/AZProductions/KookaburraSDK/blob/main/README.md#-get-started)
 
 ###### **Remember, Kookaburra.SDK is still in Pre-Release. Features may vary in the final release.**
 
