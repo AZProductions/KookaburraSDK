@@ -6,7 +6,7 @@
 
 [![Nuget Badge](https://img.shields.io/nuget/v/Kookaburra.SDK)](https://www.nuget.org/packages/Kookaburra.SDK)
 [![Nuget Badge 2](https://img.shields.io/nuget/dt/Kookaburra.SDK)](https://www.nuget.org/stats/packages/Kookaburra.SDK?groupby=Version)
-![GitHub Stars](https://img.shields.io/github/stars/AZProductions/KookaburraSDK)
+[![GitHub Stars](https://img.shields.io/github/stars/AZProductions/KookaburraSDK)](https://github.com/AZProductions/KookaburraSDK/stargazers)
 ----
 
 ## 📚 Description
