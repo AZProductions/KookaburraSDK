@@ -38,6 +38,7 @@ Console.WriteLine(Env.IsCurrentProcessAdmin()); //Returns true if the user is ad
 After downloading it from Nuget, add it to your project dependencies. Import it by typing `using Kookaburra.SDK;`.
 
 ## 🧾List
+### Markup Lib.
 | Example | Name | Description |
 | ----- | ----- | ----- |
 | `Console.WriteLine(Markup.RemoveFirstChar("hhello"));` | **Markup.RemoveFirstChar** | Removes the first character from string and returns it. |
