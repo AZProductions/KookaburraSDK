@@ -63,6 +63,28 @@ After downloading it from Nuget, add it to your project dependencies. Import it 
 | `Markup.SetPos(1,2);` | **Markup.SetPos** | Sets the coorinates of the console cursor. |
 |`Console.WriteLine(Markup.SplitAndRemove("Hello World !", " World ")[0].ToString());`| **Markup.SplitAndRemove** | Splits the string and removes the part where it got splitted. |
 
+### Env Lib.
+| Example | Name | Description |
+| ----- | ----- | ----- |
+| `Console.WriteLine(Env.Is64x);` | **Env.Is64x** | If True, the running program is x64 based. |
+| `Console.WriteLine(Env.Is64xProcess);` | **Env.Is64xProcess** | If True, the system is x64 based. |
+| `Console.WriteLine(Env.GetOSPlatform());` | **Env.GetOSPlatform** | Returns the current OS Platform.|
+| `Console.WriteLine(Env.MachineName);` | **Env.MachineName** | Returns the current machinename.|
+| `Console.WriteLine(Env.UserName);` | **Env.UserName* | Returns the current username. |
+| `Console.WriteLine(Env.CurrentDirectory);` | **Env.CurrentDirectory** | Returns the current working directory.|
+| `Console.WriteLine(Env.IsCurrentProcessAdmin());` | **Env.IsCurrentProcessAdmin** | Returns the current program is running in administrator mode.|
+| `Console.WriteLine(Env.GetManufacturerName());` | **Env.GetManufacturerName** | Returns the manufacturer name of the current computer.|
+| `Console.WriteLine(Env.GetCPUStatus());` | **Env.GetCPUStatus** | Returns the CPU status. (using Win32_Processor API) |
+| `Console.WriteLine(Env.GetCPUCaption());` | **Env.GetCPUCaption** | Returns the CPU caption. (using Win32_Processor API) |
+| `Console.WriteLine(Env.GetGPUCaption());` | **Env.GetGPUCaption** | Returns the GPU caption. (using Win32_VideoController API) |
+| `Console.WriteLine(Env.GetLocalDriveCaption());` | **Env.GetLocalDriveCaption** | Returns the local drive caption. (using Win32_VideoController API) |
+| `Console.WriteLine(Env.GetWin32Info("Win32_LogicalDisk", "Caption"));` | **Env.GetWin32Info** | Returns the requested data from the Win32 API. |
+| `Console.WriteLine(Env.GetOSType());` | **Env.GetOSType** | Returns the current Operating System. (Windows, Linux, MacOS, FreeBSD) |
+| `Console.WriteLine(Env.GetScreenBrightness());` | **Env.GetScreenBrightness** | Returns the current Screen Brightness. (using WmiMonitorBrightness API) |
+| `Env.SetScreenBrightness(50);` | **Env.SetScreenBrightness** | Sets the current Screen Brightness. (using WmiMonitorBrightness API) [Max: 100, Min:1] |
+| `Env.IncreaseVolume();` | **Env.IncreaseVolume** | Increases the users volume. (using user32.dll API) |
+| `Env.DecreaseVolume();` | **Env.DecreaseVolume** | Decreases the users volume. (using user32.dll API) |
+
 ## Copyright and License
 
 This repository is under a [proprietary licence](https://github.com/AZProductions/Kookaburra/blob/main/LICENCE).
