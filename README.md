@@ -37,6 +37,9 @@ Console.WriteLine(Env.IsCurrentProcessAdmin()); //Returns true if the user is ad
 ## ⏱ Get Started
 After downloading it from Nuget, add it to your project dependencies. Import it by typing `using Kookaburra.SDK;`.
 
+## ⚡ Tips
+1. **When using the SDK, some libraries use the same namespaces which can cause confusion or even break your program.** You can import the library with a custom name like SDK by typing this: **`using SDK = Kookaburra.SDK;`**.
+
 ## 🧾List
 ### Markup Lib.
 | Example | Name | Description |
@@ -84,6 +87,33 @@ After downloading it from Nuget, add it to your project dependencies. Import it 
 | `Env.SetScreenBrightness(50);` | **Env.SetScreenBrightness** | Sets the current Screen Brightness. (using WmiMonitorBrightness API) [Max: 100, Min:1] |
 | `Env.IncreaseVolume();` | **Env.IncreaseVolume** | Increases the users volume. (using user32.dll API) |
 | `Env.DecreaseVolume();` | **Env.DecreaseVolume** | Decreases the users volume. (using user32.dll API) |
+
+### WinAPI Lib.
+| Example | Name | Description |
+| ----- | ----- | ----- |
+|`Console.WriteLine(WinAPI.Win32_Battery("TimeToFullCharge"));`| **WinAPI.Win32_Battery** | Returns the specified value in the Win32_VideoController API. |
+|`Console.WriteLine(WinAPI.Win32_VideoController("Caption"));`| **WinAPI.Win32_VideoController** | Returns the specified value in the Win32_VideoController API. |
+|`Console.WriteLine(WinAPI.Win32_Processor("Caption"));`| **WinAPI.Win32_Processor** | Returns the specified value in the Win32_Processor API. |
+
+### Networking Lib.
+| Example | Name | Description |
+| ----- | ----- | ----- |
+| `Console.WriteLine(Networking.HasInternet.ToString())` | **Networking.HasInternet** | If True, the current PC has an internet connection. |
+| `Console.WriteLine(Networking.GetLocalIP())` | **Networking.GetLocalIP** | Returns the local IP of the current system. |
+| `Console.WriteLine(Networking.GetPublicIP())` | **Networking.GetPublicIP** | Returns the public IP of the current system using the 'checkip.dydns.org' API. |
+| `Networking.Download(location);` | **Networking.Download** | Downloads the mentioned file to the mentioned address, using the System.Net.DownloadFile API. |
+| `Networking.DownloadAsync(location);` | **Networking.DownloadAsync** | Downloads the mentioned file to the mentioned address asynchronous, using the System.Net.DownloadFileAsync API. |
+| `Console.WriteLine(Networking.APIRequest(location));` | **Networking.APIRequest** | Sends a HTTP web request to the specified server and returns the raw html. |
+
+### BatteryInformation Lib.
+| Example | Name | Description |
+| ----- | ----- | ----- |
+| `BatteryInformation bi = new BatteryInformation();` | **BatteryInformation** | BatteryInformation Object for the Kookaburra SDK. |
+| `Console.WriteLine(bi.ListAPI());` | **BatteryInformation.ListAPI** | Returns the Battery status. (using Win32_Battery API) |
+| `Console.WriteLine(bi.GetStatus());` | **BatteryInformation.GetStatus** | Returns the requested data from the Win32 API. |
+| `Console.WriteLine(bi.TimeToFullCharge());` | **BatteryInformation.TimeToFullCharge** | Returns the time until the battery is fully charged. (using Win32_Battery API) |
+| `Console.WriteLine(bi.GetBatteryCaption());` | **BatteryInformation.GetBatteryCaption** | Returns the Battery caption. (using Win32_Battery API) |
+| `Console.WriteLine(bi.IsPowerManagementSupported());` | **BatteryInformation.IsPowerManagementSupported** | Returns True if the battery is PowerManagementSupported. (using Win32_Battery API) |
 
 ## Copyright and License
 
