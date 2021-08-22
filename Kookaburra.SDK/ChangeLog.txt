@@ -1,0 +1,14 @@
+﻿-0.0.1
+-- First official build.
+-- Added Markup Class.
+-- Worked on Networking and Debug class.
+
+-0.0.2
+-- Finished Markup class.
+-- Added Alert Class.
+-- Added Env Class.
+
+-0.0.3
+-- Added BatteryInformation Class.
+-- Removed Data Class.
+-- Added WinAPI Class.

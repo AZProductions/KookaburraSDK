@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Net;
 using System.Net.NetworkInformation;
 using System.Net.Sockets;
@@ -60,6 +61,22 @@ namespace Kookaburra.SDK
         {
             WebClient client = new WebClient();
             client.DownloadFileAsync(new System.Uri(Address), FileLocation);
+        }
+        /// <summary>
+        /// Sends a HTTP web request to the specified server and returns the raw html.
+        /// </summary>
+        public static string APIRequest(string Url) 
+        {
+            string html = string.Empty;
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(Url);
+            request.AutomaticDecompression = DecompressionMethods.GZip;
+            using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+            using (Stream stream = response.GetResponseStream())
+            using (StreamReader reader = new StreamReader(stream))
+            {
+                html = reader.ReadToEnd();
+            }
+            return html;
         }
     }
 }

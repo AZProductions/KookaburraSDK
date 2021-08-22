@@ -1,9 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+	  <!--<TargetFramework>net5.0</TargetFramework>-->
+	<TargetFramework>net5.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.0.1.1</Version>
+    <Version>0.0.3.6</Version>
     <Description>SDK Toolkit for the Kookaburra Programming Language.</Description>
     <Company>AZ Software</Company>
     <Product>Kookaburra</Product>
@@ -17,8 +18,12 @@
     <PackageIconUrl />
     <PackageLicenseExpression></PackageLicenseExpression>
     <PackageLicenseFile>LICENCE.txt</PackageLicenseFile>
-    <AssemblyVersion>0.0.1.1</AssemblyVersion>
-    <FileVersion>0.0.1.1</FileVersion>
+    <AssemblyVersion>0.0.3.6</AssemblyVersion>
+    <FileVersion>0.0.3.6</FileVersion>
+    <PackageReleaseNotes>Fixed bugs.
+Improved stability.</PackageReleaseNotes>
+    <NeutralLanguage>en</NeutralLanguage>
+    <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
 
   <ItemGroup>

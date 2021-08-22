@@ -19,7 +19,7 @@ namespace Kookaburra.SDK
         Process process = new Process();
 
         /// <summary>
-        /// Debug module of the Kookaburra SDK.
+        /// Debug object for the Kookaburra SDK.
         /// </summary>
         public Debug(string executablelocation, string arguments = "")
         {

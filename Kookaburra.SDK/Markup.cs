@@ -181,5 +181,13 @@ namespace Kookaburra.SDK
             ListValue.Remove(SplitValue);
             return ListValue.ToArray();
         }
+
+        /// <summary>
+        /// Removes the mentioned value from string and returns it.
+        /// </summary>
+        public static string RemoveString(string Value, string RemoveValue) 
+        {
+            return Value.Replace(RemoveValue, string.Empty);
+        }
     }
 }

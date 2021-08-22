@@ -16,12 +16,12 @@ namespace Kookaburra.SDK
     public static class Env
     {
         /// <summary>
-        /// If True, the system is x64 based.
+        /// If True, the running program is x64 based.
         /// </summary>
         public static readonly bool Is64x = Environment.Is64BitProcess;
-        
+
         /// <summary>
-        /// If True, the running program is x64 based.
+        /// If True, the system is x64 based.
         /// </summary>
         public static readonly bool Is64xProcess = Environment.Is64BitOperatingSystem;
         
@@ -175,7 +175,6 @@ namespace Kookaburra.SDK
             {
                 foreach (ManagementObject mo in mc.GetInstances())
                 {
-                    // display general system information
                     Name = mo[Instance].ToString();
                 }
             }
@@ -209,6 +208,64 @@ namespace Kookaburra.SDK
                 throw new Exception("Invalid OS.");
             }
             return OS;
+        }
+
+        [SupportedOSPlatform("windows")]
+        /// <summary>
+        /// Returns the current Screen Brightness. (using WmiMonitorBrightness API)
+        /// </summary>
+        public static int GetScreenBrightness()
+        {
+            using var mclass = new ManagementClass("WmiMonitorBrightness")
+            {
+                Scope = new ManagementScope(@"\\.\root\wmi")
+            };
+            using var instances = mclass.GetInstances();
+            foreach (ManagementObject instance in instances)
+            {
+                return (byte)instance.GetPropertyValue("CurrentBrightness");
+            }
+            return 0;
+        }
+
+        [SupportedOSPlatform("windows")]
+        /// <summary>
+        /// Sets the current Screen Brightness. (using WmiMonitorBrightness API) [Max: 100, Min:1]
+        /// </summary>
+        public static void SetScreenBrightness(int brightness)
+        {
+            using var mclass = new ManagementClass("WmiMonitorBrightnessMethods")
+            {
+                Scope = new ManagementScope(@"\\.\root\wmi")
+            };
+            using var instances = mclass.GetInstances();
+            var args = new object[] { 1, brightness };
+            foreach (ManagementObject instance in instances)
+            {
+                instance.InvokeMethod("WmiSetBrightness", args);
+            }
+        }
+
+        [SupportedOSPlatform("windows")]
+        [DllImport("user32.dll")]
+        static private extern void keybd_event(byte bVk, byte bScan, uint dwFlags, int dwExtraInfo);
+
+        [SupportedOSPlatform("windows")]
+        /// <summary>
+        /// Increases the users volume. (using user32.dll API)
+        /// </summary>
+        public static void IncreaseVolume()
+        {
+            keybd_event((byte)ConsoleKey.VolumeUp, 0, 0, 0);
+        }
+
+        [SupportedOSPlatform("windows")]
+        /// <summary>
+        /// Decreases the users volume. (using user32.dll API)
+        /// </summary>
+        public static void DecreaseVolume()
+        {
+            keybd_event((byte)ConsoleKey.VolumeDown, 0, 0, 0);
         }
     }
 }
