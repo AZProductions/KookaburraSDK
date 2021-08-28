@@ -33,6 +33,10 @@ db.Stop();
 ```C#
 Console.WriteLine(Env.IsCurrentProcessAdmin()); //Returns true if the user is admin. (Using Windows API)
 ```
+- Support for native windows API.
+```c#
+KeyInput.Send(ConsoleKey.A);
+```
 
 ## ⏱ Get Started
 After downloading it from Nuget, add it to your project dependencies. Import it by typing `using Kookaburra.SDK;`.
