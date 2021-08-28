@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>Kookaburra.SDK</id>
-    <version>0.0.3.6</version>
+    <version>0.0.3.7</version>
     <authors>AZ Software</authors>
     <license type="file">LICENCE.txt</license>
     <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>

@@ -12,3 +12,4 @@
 -- Added BatteryInformation Class.
 -- Removed Data Class.
 -- Added WinAPI Class.
+

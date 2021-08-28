@@ -3,11 +3,10 @@ using System.Collections.Generic;
 
 namespace Kookaburra.SDK
 {
-    [Obsolete("Markup class will be renamed to Format in the next version.")]
     /// <summary>
-    /// Markup Class for the Kookaburra SDK.
+    /// Format Class for the Kookaburra SDK.
     /// </summary>
-    public static class Markup
+    public static class Format
     {
         /// <summary>
         /// Returns True if the string start with a uppercase letter.
@@ -130,7 +129,7 @@ namespace Kookaburra.SDK
         /// <summary>
         /// Removes the first character from string and returns it.
         /// </summary>
-        public static string RemoveFirstChar(string Value) 
+        public static string RemoveFirstChar(string Value)
         {
             return Value.Remove(0, 1);
         }
@@ -176,7 +175,7 @@ namespace Kookaburra.SDK
         /// <summary>
         /// Splits the string and removes the part where it got splitted.
         /// </summary>
-        public static string[] SplitAndRemove(string Value, string SplitValue) 
+        public static string[] SplitAndRemove(string Value, string SplitValue)
         {
             var ListValue = new List<string>(Value.Split(SplitValue));
             ListValue.Remove(SplitValue);
@@ -186,7 +185,7 @@ namespace Kookaburra.SDK
         /// <summary>
         /// Removes the mentioned value from string and returns it.
         /// </summary>
-        public static string RemoveString(string Value, string RemoveValue) 
+        public static string RemoveString(string Value, string RemoveValue)
         {
             return Value.Replace(RemoveValue, string.Empty);
         }

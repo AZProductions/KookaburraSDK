@@ -4,8 +4,8 @@
 	  <!--<TargetFramework>net5.0</TargetFramework>-->
 	<TargetFramework>net5.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>0.0.3.6</Version>
-    <Description>SDK Toolkit for the Kookaburra Programming Language.</Description>
+    <Version>0.0.3.9</Version>
+    <Description>SDK Toolkit for the Kookaburra Programming Language. Which includes Markup, Alerts, BatteryInformation, CPUInformation and more.</Description>
     <Company>AZ Software</Company>
     <Product>Kookaburra</Product>
     <Authors>AZ Software</Authors>
@@ -18,10 +18,10 @@
     <PackageIconUrl />
     <PackageLicenseExpression></PackageLicenseExpression>
     <PackageLicenseFile>LICENCE.txt</PackageLicenseFile>
-    <AssemblyVersion>0.0.3.6</AssemblyVersion>
-    <FileVersion>0.0.3.6</FileVersion>
-    <PackageReleaseNotes>Fixed bugs.
-Improved stability.</PackageReleaseNotes>
+    <AssemblyVersion>0.0.3.9</AssemblyVersion>
+    <FileVersion>0.0.3.9</FileVersion>
+    <PackageReleaseNotes>Renamed Markup to Format.
+Added KeyInput class. Simulate key presses without the Windows.Forms library. For dotnet core apps.</PackageReleaseNotes>
     <NeutralLanguage>en</NeutralLanguage>
     <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>

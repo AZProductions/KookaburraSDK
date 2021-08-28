@@ -17,57 +17,57 @@ namespace Kookaburra.SDK
                 case 1:
                     if (NewLine)
                         Console.Write("\x0A");
-                    Markup.SetForegroundColor("White");
+                    Format.SetForegroundColor("White");
                     Console.Write("[");
-                    Markup.SetForegroundColor("Yellow");
+                    Format.SetForegroundColor("Yellow");
                     Console.Write("Note");
-                    Markup.SetForegroundColor("White");
+                    Format.SetForegroundColor("White");
                     Console.Write("] " + Message);
                     break;
                 case 2:
                     if (NewLine)
                         Console.Write("\x0A");
-                    Markup.SetForegroundColor("White");
+                    Format.SetForegroundColor("White");
                     Console.Write("[");
-                    Markup.SetForegroundColor("Blue");
+                    Format.SetForegroundColor("Blue");
                     Console.Write("Message");
-                    Markup.SetForegroundColor("White");
+                    Format.SetForegroundColor("White");
                     Console.Write("] " + Message);
                     break;
                 case 3:
                     if (NewLine)
                         Console.Write("\x0A");
-                    Markup.SetForegroundColor("White");
+                    Format.SetForegroundColor("White");
                     Console.Write("[");
-                    Markup.SetForegroundColor("DarkYellow");
+                    Format.SetForegroundColor("DarkYellow");
                     Console.Write("Warning");
-                    Markup.SetForegroundColor("White");
+                    Format.SetForegroundColor("White");
                     Console.Write("] " + Message);
                     break;
                 case 4:
                     if (NewLine)
                         Console.Write("\x0A");
-                    Markup.SetForegroundColor("White");
+                    Format.SetForegroundColor("White");
                     Console.Write("[");
-                    Markup.SetForegroundColor("Red");
+                    Format.SetForegroundColor("Red");
                     Console.Write("Error");
-                    Markup.SetForegroundColor("White");
+                    Format.SetForegroundColor("White");
                     Console.Write("] " + Message);
                     break;
                 case 5:
                     if (NewLine)
                         Console.Write("\x0A");
-                    Markup.SetForegroundColor("White");
+                    Format.SetForegroundColor("White");
                     Console.Write("[");
-                    Markup.SetForegroundColor("Green");
+                    Format.SetForegroundColor("Green");
                     Console.Write("Help");
-                    Markup.SetForegroundColor("White");
+                    Format.SetForegroundColor("White");
                     Console.Write("] " + Message);
                     break;
                 case 6:
                     if (NewLine)
                         Console.Write("\x0A");
-                    Markup.SetForegroundColor("White");
+                    Format.SetForegroundColor("White");
                     Console.Write("[");
                     Console.Write("Update");
                     Console.Write("] " + Message);
