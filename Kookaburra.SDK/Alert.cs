@@ -5,12 +5,20 @@ namespace Kookaburra.SDK
     /// <summary>
     /// Alert Class for the Kookaburra SDK.
     /// </summary>
-    public static class Alert
+    public class Alert
     {
+        private readonly string MESSAGE_DATA;
+        private readonly string WARNIGN_DATA;
+
+        public Alert(Type type)
+        {
+
+        }
+
         /// <summary>
         /// Displays an Alert.  (1. Note | 2. Message | 3. Warning | 4. Error | 5. Help | 6. Update)
         /// </summary>
-        public static void Display(string Message, int Style, bool NewLine = true)
+        public void Display(string Message, int Style, bool NewLine = true)
         {
             switch (Style)
             {
@@ -74,6 +82,20 @@ namespace Kookaburra.SDK
                     break;
                 default:
                     throw new Exception("Incorrect Style. Choose 1 to 6.");
+            }
+        }
+
+
+        public struct Type
+        {
+            public Type(string test)
+            {
+                
+            }
+            
+            public static Type Message()
+            {
+                return new Type("hello");
             }
         }
     }
