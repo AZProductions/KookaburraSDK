@@ -21,7 +21,7 @@ Console.WriteLine(Markup.RemoveFirstChar("hhello")); //Prints 'hello'.
 ```
 - Easy to use Alerts.
 ```c#
-Alert.Display("This is an alert!", 4); //Prints '[Warning] This is an alert!'.
+new Alert("hello world", Alert.Type.Error);
 ```
 - Extensive Debugging features.
 ```c#
