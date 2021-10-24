@@ -17,64 +17,68 @@ namespace Kookaburra.SDK
     {
         public Alert(string message, Type type, bool newline = true)
         {
-            if (Equals(type, Type.Note()))
+            switch (type)
             {
-                if (newline)
-                    Console.Write("\x0A");
-                Format.SetForegroundColor("White");
-                Console.Write("[");
-                Format.SetForegroundColor("Yellow");
-                Console.Write(AlertData.NOTE_DATA);
-                Format.SetForegroundColor("White");
-                Console.Write("] " + message);
-            }
-            
-            if (Equals(type, Type.Message()))
-            {
-                if (newline)
-                    Console.Write("\x0A");
-                Format.SetForegroundColor("White");
-                Console.Write("[");
-                Format.SetForegroundColor("Blue");
-                Console.Write(AlertData.MESSAGE_DATA);
-                Format.SetForegroundColor("White");
-                Console.Write("] " + message);
-            }
-            
-            if (Equals(type, Type.Warning()))
-            {
-                if (newline)
-                    Console.Write("\x0A");
-                Format.SetForegroundColor("White");
-                Console.Write("[");
-                Format.SetForegroundColor("DarkYellow");
-                Console.Write(AlertData.WARNING_DATA);
-                Format.SetForegroundColor("White");
-                Console.Write("] " + message);
-            }
-            
-            if (Equals(type, Type.Error()))
-            {
-                if (newline)
-                    Console.Write("\x0A");
-                Format.SetForegroundColor("White");
-                Console.Write("[");
-                Format.SetForegroundColor("Red");
-                Console.Write(AlertData.ERROR_DATA);
-                Format.SetForegroundColor("White");
-                Console.Write("] " + message);
-            }
-            
-            if (Equals(type, Type.Help()))
-            {
-                if (newline)
-                    Console.Write("\x0A");
-                Format.SetForegroundColor("White");
-                Console.Write("[");
-                Format.SetForegroundColor("Green");
-                Console.Write(AlertData.HELP_DATA);
-                Format.SetForegroundColor("White");
-                Console.Write("] " + message);
+                default:
+                    if (newline)
+                        Console.Write("\x0A");
+                    Format.SetForegroundColor("White");
+                    Console.Write("[");
+                    Format.SetForegroundColor("Yellow");
+                    Console.Write(AlertData.NOTE_DATA);
+                    Format.SetForegroundColor("White");
+                    Console.Write("] " + message);
+                    break;
+                case Type.Note:
+                    if (newline)
+                        Console.Write("\x0A");
+                    Format.SetForegroundColor("White");
+                    Console.Write("[");
+                    Format.SetForegroundColor("Yellow");
+                    Console.Write(AlertData.NOTE_DATA);
+                    Format.SetForegroundColor("White");
+                    Console.Write("] " + message);
+                    break;
+                case Type.Message:
+                    if (newline)
+                        Console.Write("\x0A");
+                    Format.SetForegroundColor("White");
+                    Console.Write("[");
+                    Format.SetForegroundColor("Blue");
+                    Console.Write(AlertData.MESSAGE_DATA);
+                    Format.SetForegroundColor("White");
+                    Console.Write("] " + message);
+                    break;
+                case Type.Warning:
+                    if (newline)
+                        Console.Write("\x0A");
+                    Format.SetForegroundColor("White");
+                    Console.Write("[");
+                    Format.SetForegroundColor("DarkYellow");
+                    Console.Write(AlertData.WARNING_DATA);
+                    Format.SetForegroundColor("White");
+                    Console.Write("] " + message);
+                    break;
+                case Type.Error:
+                    if (newline)
+                        Console.Write("\x0A");
+                    Format.SetForegroundColor("White");
+                    Console.Write("[");
+                    Format.SetForegroundColor("Red");
+                    Console.Write(AlertData.ERROR_DATA);
+                    Format.SetForegroundColor("White");
+                    Console.Write("] " + message);
+                    break;
+                case Type.Help:
+                    if (newline)
+                        Console.Write("\x0A");
+                    Format.SetForegroundColor("White");
+                    Console.Write("[");
+                    Format.SetForegroundColor("Green");
+                    Console.Write(AlertData.HELP_DATA);
+                    Format.SetForegroundColor("White");
+                    Console.Write("] " + message);
+                    break;
             }
         }
 
@@ -143,37 +147,13 @@ namespace Kookaburra.SDK
         }
 
 
-        public struct Type
+        public enum Type
         {
-            public Type(string test)
-            {
-
-            }
-
-            public static Type Message()
-            {
-                return new Type(AlertData.MESSAGE_DATA);
-            }
-
-            public static Type Note()
-            {
-                return new Type(AlertData.NOTE_DATA);
-            }
-
-            public static Type Warning()
-            {
-                return new Type(AlertData.WARNING_DATA);
-            }
-
-            public static Type Error()
-            {
-                return new Type(AlertData.WARNING_DATA);
-            }
-            
-            public static Type Help()
-            {
-                return new Type(AlertData.HELP_DATA);
-            }
+            Note,
+            Message,
+            Warning,
+            Error,
+            Help
         }
     }
 }
